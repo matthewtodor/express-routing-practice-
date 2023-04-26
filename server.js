@@ -22,7 +22,7 @@ app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/public/index.html
 
 // GET Route for feedback page
 app.get("/feedback", (req, res) => res.sendFile(path.join(__dirname, "/public/pages/feedback.html")));
+app.get("/*", (req, res) => res.sendFile(path.join(__dirname, "/public/pages/404.html")));
 
 // TODO: add wildcard route for all other url endpoints that returns a 404 page
-
 app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT} 🚀`));
